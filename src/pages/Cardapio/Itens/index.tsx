@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Item from "./Item";
 import cardapio from "./itens.json";
 import styles from "./Itens.module.scss";
@@ -41,9 +40,7 @@ export default function Itens(props: Props) {
 			{ordenar(cardapio)
 				.filter((item) => testaBusca(item.title) && testaFiltro(item.category.id))
 				.map((item) => (
-					<div>
-						<Item key={item.id} {...item} />
-					</div>
+					<Item key={item.id} {...item} />
 				))}
 		</div>
 	);
