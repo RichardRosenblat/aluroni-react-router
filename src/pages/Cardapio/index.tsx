@@ -5,11 +5,12 @@ import { useState } from "react";
 import Filtros from "./Filtros";
 import Ordenador from "./Ordenador";
 import Itens from "./Itens";
+import { opcoesOrdenador } from "../../types/opcoesOrdenador";
 
 export default function Cardapio() {
   const [busca, setBusca] = useState("");
   const [filtro, setFiltro] = useState<number | null>(null);
-  const [ordenador, setOrdenador] = useState("");
+  const [ordenador, setOrdenador] = useState<opcoesOrdenador>("");
   return (
     <main>
       <nav className={styles.menu}>
