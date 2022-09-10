@@ -37,16 +37,10 @@ export default function Itens(props: Props) {
 		}
 	}
 
-	useEffect(() => {
-		const novaLista = cardapio.filter(
-			(item) => testaBusca(item.title) && testaFiltro(item.category.id)
-		);
-		setLista(ordenar(novaLista));
-	}, [busca, filtro, ordenador]);
-
 	return (
 		<div className={styles.itens}>
-			{lista
+			{ordenar(lista)
+				.filter((item) => testaBusca(item.title) && testaFiltro(item.category.id))
 				.map((item) => (
 					<div>
 						<Item key={item.id} {...item} />
