@@ -10,7 +10,6 @@ interface Props {
 }
 
 export default function Itens(props: Props) {
-	const [lista, setLista] = useState(cardapio);
 	const { busca, filtro, ordenador } = props;
 
 	function testaBusca(title: string) {
@@ -39,7 +38,7 @@ export default function Itens(props: Props) {
 
 	return (
 		<div className={styles.itens}>
-			{ordenar(lista)
+			{ordenar(cardapio)
 				.filter((item) => testaBusca(item.title) && testaFiltro(item.category.id))
 				.map((item) => (
 					<div>
