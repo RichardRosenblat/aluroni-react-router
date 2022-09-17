@@ -1,16 +1,16 @@
-import styles from "./Sobre.module.scss";
-import stylesTema from "styles/Tema.module.scss";
-import casa from "assets/Sobre/casa.png";
-import massa1 from "assets/Sobre/massa1.png";
-import massa2 from "assets/Sobre/massa2.png";
+import styles from './Sobre.module.scss';
+import stylesTema from 'styles/Tema.module.scss';
+import casa from 'assets/Sobre/casa.png';
+import massa1 from 'assets/Sobre/massa1.png';
+import massa2 from 'assets/Sobre/massa2.png';
 
 const imagens = [
     {
-        id:"fe5dfe27-88d7-4ee5-b6b3-4a901df3b886",
+        id:'fe5dfe27-88d7-4ee5-b6b3-4a901df3b886',
         massa:massa1
     },
     {
-        id:"cb6765eb-2963-403d-9347-e337d89fe9b9",
+        id:'cb6765eb-2963-403d-9347-e337d89fe9b9',
         massa:massa2
     }
 ];

@@ -1,6 +1,6 @@
-import Item from "./Item";
-import cardapio from "data/cardapio.json";
-import styles from "./Itens.module.scss";
+import Item from './Item';
+import cardapio from 'data/cardapio.json';
+import styles from './Itens.module.scss';
 
 interface Props {
 	busca: string;
@@ -12,7 +12,7 @@ export default function Itens(props: Props) {
     const { busca, filtro, ordenador } = props;
 
     function testaBusca(title: string) {
-        const regex = new RegExp(busca, "i");
+        const regex = new RegExp(busca, 'i');
         return regex.test(title);
     }
     function testaFiltro(id: number) {
@@ -24,11 +24,11 @@ export default function Itens(props: Props) {
 
     function ordenar(novaLista: typeof cardapio) {
         switch (ordenador) {
-        case "porcao":
+        case 'porcao':
             return novaLista.sort((a, b) => a.size - b.size);
-        case "qtd_pessoas":
+        case 'qtd_pessoas':
             return novaLista.sort((a, b) => a.serving - b.serving);
-        case "preco":
+        case 'preco':
             return novaLista.sort((a, b) => a.price - b.price);
         default:
             return novaLista;
