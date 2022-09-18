@@ -4,13 +4,13 @@ import { useState } from "react";
 import Filtros from "./Filtros";
 import Ordenador from "./Ordenador";
 import Itens from "./Itens";
-import { opcoesOrdenador } from "../../types/opcoesOrdenador";
+import { OpcoesOrdenador } from "../../types/OpcoesOrdenador";
 import stylesTema from "styles/Tema.module.scss";
 
 export default function Cardapio() {
   const [busca, setBusca] = useState("");
   const [filtro, setFiltro] = useState<number | null>(null);
-  const [ordenador, setOrdenador] = useState<opcoesOrdenador>("");
+  const [ordenador, setOrdenador] = useState<OpcoesOrdenador>("");
   return (
     <section className={styles.cardapio}>
       <h3 className={stylesTema.titulo}>Cardápio</h3>

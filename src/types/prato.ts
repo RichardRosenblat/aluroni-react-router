@@ -1,2 +1,5 @@
 import cardapio from "data/cardapio.json";
-export type prato = typeof cardapio[0];
+
+export type Cardapio = typeof cardapio;
+
+export type Prato = typeof cardapio[0];

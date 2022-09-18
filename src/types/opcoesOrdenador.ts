@@ -1,1 +1,1 @@
-export type opcoesOrdenador = "" | "porcao" | "qtd_pessoas" | "preco";
+export type OpcoesOrdenador = "" | "porcao" | "qtd_pessoas" | "preco";
